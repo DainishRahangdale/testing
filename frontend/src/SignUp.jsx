@@ -7,9 +7,10 @@ const SignUp = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     console.log('Logging in with:', { username, password });
-    axios.post('http://localhost:3000/signup', { username, password })
+    axios.post('https://testingbackend-production.up.railway.app/signup', { username, password })
   .then((result) => {
     console.log(result.data.message); // ✅ Correct path
+    alert("successfully registerd");
   })
   .catch((error) => {
     console.error('Signup error:', error.response?.data?.message || error.message);

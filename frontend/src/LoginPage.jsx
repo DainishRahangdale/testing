@@ -7,7 +7,7 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     console.log('Logging in with:', { username, password });
-     axios.post('http://localhost:3000/login')
+     axios.post('https://testingbackend-production.up.railway.app/login')
   };
 
   return (
